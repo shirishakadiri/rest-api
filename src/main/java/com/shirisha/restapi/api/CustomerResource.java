@@ -24,7 +24,7 @@ public class CustomerResource {
         return customerService.getCustomerList();
     }
 
-    @GetMapping(value = "/{customerId")
+    @GetMapping(value = "/{customerId}")
     public Customer getCustomer(@PathVariable("customerId") int customerId){
         return customerService.getCustomer(customerId);
     }
@@ -33,4 +33,10 @@ public class CustomerResource {
     public Customer updateCustomer(@PathVariable("customerId") int customerId, @RequestBody Customer customer){
         return customerService.updateCustomer(customerId, customer);
     }
+
+    @DeleteMapping(value = "/{customerId}")
+    public void deleteCustomer(@PathVariable("customerId") int customerId){
+        customerService.deleteCustomer(customerId);
+    }
+
 }
