@@ -1,11 +1,13 @@
 package com.shirisha.restapi.service;
 
 import com.shirisha.restapi.dao.CustomerDAO;
+import com.shirisha.restapi.exception.CustomerNotFoundException;
 import com.shirisha.restapi.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 @Component
@@ -34,7 +36,12 @@ public class CustomerService {
 
     public Customer getCustomer(int customerId){
 
-        return customerDAO.findById(customerId).get();
+        Optional<Customer> optionalCustomer = customerDAO.findById(customerId);
+
+        if(!optionalCustomer.isPresent())
+            throw new CustomerNotFoundException("Customer record not available");
+
+        return optionalCustomer.get();
         /*
         return customerList
                 .stream()
