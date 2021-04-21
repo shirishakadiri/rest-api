@@ -1,10 +1,12 @@
 package com.shirisha.restapi.service;
 
 import com.shirisha.restapi.model.Customer;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+@Component
 public class CustomerService {
 
     private int customerIdCount = 1;
