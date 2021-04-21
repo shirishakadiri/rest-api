@@ -16,3 +16,9 @@ Customize your default banner in your spring boot application
 * https://www.kammerl.de/ascii/AsciiSignature.php
 * Update the test you want
 * Run the application, you can see your test in the terminal
+
+create customer using @postmapping annotation to add new customer.
+* Run appilcation
+* open postman
+* use localhost:8080/customers in post mapping
+* add body in json type with customer first name, customer last name and email
