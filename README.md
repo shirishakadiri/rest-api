@@ -37,3 +37,14 @@ Demonstrating @PutMapping to update customer details based on customerId
 * add customer using post
 * use localhost:8080/customers/"customerId" in put
 * edit the json
+
+Demonstrating @DeleteMapping to delete customer based on customerId
+* Run the application
+* Open postman
+* add customers
+* use localhost:8080/customer/"customerId" in delete
+
+Demonstrating @JsonProperty
+* This will change the key value of json as mentioned in the json property annotation instead of the actual variable name
+
+
