@@ -22,3 +22,18 @@ create customer using @postmapping annotation to add new customer.
 * open postman
 * use localhost:8080/customers in post mapping
 * add body in json type with customer first name, customer last name and email
+
+Demonstrating @GetMapping
+* Run appilcation
+* open postman
+* add customer using post
+* check localhost:8080/customers in get
+* check localhost:8080/customers/"customerid" in get
+* edit the json
+
+Demonstrating @PutMapping to update customer details based on customerId
+* Run appilcation
+* open postman
+* add customer using post
+* use localhost:8080/customers/"customerId" in put
+* edit the json
