@@ -44,4 +44,7 @@ Demonstrating @DeleteMapping to delete customer based on customerId
 * add customers
 * use localhost:8080/customer/"customerId" in delete
 
+Demonstrating @JsonProperty
+* This will change the key value of json as mentioned in the json property annotation instead of the actual variable name
+
 
